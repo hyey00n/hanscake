@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+import { cakesData } from '../data/cakesData';
 
 const DetailPage = ({ cake, onBack, maxWidth }) => {
   const [quantity, setQuantity] = useState(1);
+
+  // 함께 구매하면 좋은 메뉴 (현재 케이크 제외하고 2개)
+  const recommendedCakes = cakesData
+    .filter(c => c.id !== cake.id)
+    .slice(0, 2);
 
   return (
     <div style={{ paddingBottom: '160px' }}>
@@ -27,13 +33,34 @@ const DetailPage = ({ cake, onBack, maxWidth }) => {
         <p className="detail-price">{cake.price.toLocaleString()}원</p>
       </div>
 
+      {/* 함께 구매하면 좋은 메뉴 */}
       <div style={{ padding: '0 24px', marginBottom: '24px' }}>
-        <h3 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '16px' }}>함께구매하면 좋은 메뉴</h3>
+        <h3 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '16px' }}>
+          함께구매하면 좋은 메뉴
+        </h3>
         <div style={{ display: 'flex', gap: '16px', overflowX: 'auto' }}>
-          {[1, 2].map((i) => (
-            <div key={i} style={{ minWidth: '160px', backgroundColor: '#f3f4f6', borderRadius: '8px', padding: '8px' }}>
-              <div style={{ height: '128px', backgroundColor: 'white', borderRadius: '8px', marginBottom: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '40px' }}>
-                {i === 1 ? '🥭' : '🍓'}
+          {recommendedCakes.map((recommendedCake) => (
+            <div 
+              key={recommendedCake.id} 
+              style={{ 
+                minWidth: '120px', 
+                backgroundColor: '#D9D9D9', 
+                padding: '8px',
+                cursor: 'pointer'
+              }}
+            >
+              <div style={{ 
+                height: '120px', 
+              }}>
+                <img 
+                  src={recommendedCake.image} 
+                  alt={recommendedCake.name}
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover' 
+                  }}
+                />
               </div>
             </div>
           ))}

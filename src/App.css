@@ -3,6 +3,10 @@
  padding: 0; 
  box-sizing: border-box; 
  } 
+
+ html {
+  overflow-y: scroll; 
+}
  button { background: none; border: none; } 
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); 
 body { 
@@ -13,6 +17,9 @@ body {
  -moz-osx-font-smoothing: grayscale; 
  } 
 
+ h1 ,h2 ,h3 {
+  letter-spacing: -1px;
+ }
  span,p { 
  letter-spacing: -0.7px; 
  } 
@@ -23,6 +30,11 @@ body {
  /* background-color: #f9fafb; */
  min-height: 100vh; 
  } 
+
+ .bottom-sheet-container{
+  max-width: 448px;
+  border: 1px solid red;
+ }
 
 /* Header */
 .header { 
@@ -219,7 +231,7 @@ width: calc(100% - 32px);
 .cake-item { 
  display: flex; 
  align-items: center; 
- padding: 10px 16px; 
+ /* padding: 10px 16px;  */
  border-radius: 8px; 
  cursor: pointer; 
  } 
@@ -387,25 +399,24 @@ width: 170px;
  } 
 
 .detail-info { 
- padding: 24px; 
+ padding: 16px; 
  } 
 
 .detail-name { 
- font-size: 24px; 
- font-weight: bold; 
- color: #ea580c; 
- margin-bottom: 12px; 
+ font-size: 22px; 
+ font-weight: 900; 
+ color: #FF552E; 
  } 
 
 .detail-description { 
  color: #6b7280; 
- margin-bottom: 16px; 
+ margin: 12px 0; 
  line-height: 1.6; 
  } 
 
 .detail-price { 
- font-size: 30px; 
- font-weight: bold; 
+ font-size: 24px; 
+ font-weight: 900; 
  margin-bottom: 16px; 
  } 
 
@@ -527,14 +538,21 @@ width: 170px;
  } 
 
 .stamp-item.active { 
- border-color: #dc2626; 
+ border-color: #FF552E; 
  } 
 
 .stamp-text { 
  text-align: center; 
- font-size: 10px; 
+ font-size: 16px; 
  font-weight: bold; 
+ color: #cacbcf;
  } 
+
+ .stamp-text.active{
+  color: #FF552E; 
+   font-weight: 800; 
+ }
+
 
 .point-history { 
  padding: 0 16px; 
@@ -873,22 +891,22 @@ width: 170px;
  } 
 
  .alarm-wrap { 
- display: flex; 
+ /* display: flex;  */
  justify-content: space-between; 
  align-items: center; 
  padding: 12px 0; 
- 
+ display: flex;
  border-bottom: 1px solid #e2e2e2; 
 
  } 
+ .alarm-wrap .close-icon img {
+  width: 32px;
+  height: 32px;
+}
 
 
 /* 이벤트 페이지 */
 
-
-.event-page{
-
-}
 
 .event-tabs{
    display: flex; 

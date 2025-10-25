@@ -22,14 +22,14 @@ export const cakesData = [
 ];
 
 export const signatureCakesData = [
-  { id: 6, name: '뽀띠 청포도 치즈타르트', subtitle: '말스터치 씨이버거 세트', price: 69000, image: grapeImg, color: '#dcfce7' },
-  { id: 7, name: '무화과생크림', subtitle: '말스터치 씨이버거 세트', price: 69000, image: figImg, color: '#ffedd5' },
-  { id: 8, name: '뽀띠 체리베리 치즈타르트', subtitle: '말스터치 씨이버거 세트', price: 69000, image: cherryImg, color: '#fee2e2' },
-  { id: 9, name: '뽀띠 딸기 치즈타르트', subtitle: '말스터치 씨이버거 세트', price: 69000, image: strawberryImg, color: '#fecaca' },
-  { id: 10, name: '멜론 생크림', subtitle: '말스터치 씨이버거 세트', price: 69000, image: melonImg, color: '#f0fdf4' },
-  { id: 11, name: '청포도 생크림', subtitle: '말스터치 씨이버거 세트', price: 69000, image: grapeImg, color: '#dcfce7' },
-  { id: 12, name: '망고 생크림', subtitle: '말스터치 씨이버거 세트', price: 69000, image: mangoImg, color: '#fef9c3' },
-  { id: 13, name: '화이트 스트로베리 프레지에', subtitle: '말스터치 씨이버거 세트', price: 69000, image: strawberryImg, color: '#fce7f3' },
+  { id: 6, name: '뽀띠 청포도 치즈타르트', subtitle: '말스터치 씨이버거 세트', price: 69000, image: grapeImg, color: '#D9D9D9' },
+  { id: 7, name: '무화과생크림', subtitle: '말스터치 씨이버거 세트', price: 69000, image: figImg, color: '#D9D9D9' },
+  { id: 8, name: '뽀띠 체리베리 치즈타르트', subtitle: '말스터치 씨이버거 세트', price: 69000, image: cherryImg, color: '#D9D9D9' },
+  { id: 9, name: '뽀띠 딸기 치즈타르트', subtitle: '말스터치 씨이버거 세트', price: 69000, image: strawberryImg, color: '#D9D9D9' },
+  { id: 10, name: '멜론 생크림', subtitle: '말스터치 씨이버거 세트', price: 69000, image: melonImg, color: '#D9D9D9' },
+  { id: 11, name: '청포도 생크림', subtitle: '말스터치 씨이버거 세트', price: 69000, image: grapeImg, color: '#D9D9D9' },
+  { id: 12, name: '망고 생크림', subtitle: '말스터치 씨이버거 세트', price: 69000, image: mangoImg, color: '#D9D9D9' },
+  { id: 13, name: '화이트 스트로베리 프레지에', subtitle: '말스터치 씨이버거 세트', price: 69000, image: strawberryImg, color: '#D9D9D9' },
 ];
 
 export const pointHistoryData = [

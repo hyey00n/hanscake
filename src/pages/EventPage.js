@@ -3,6 +3,10 @@ import eventBanner1 from "../assets/images/event_banner1.jpg";
 import eventBanner2 from "../assets/images/event_banner2.jpg";
 import eventBanner3 from "../assets/images/event_banner3.jpg";
 
+
+import leftArrow from '../assets/svg/left_arrow.svg';
+import mainClose from '../assets/svg/main_close.svg';
+
 const EventPage = ({ onBack }) => {
 
   const events = [
@@ -37,9 +41,13 @@ const EventPage = ({ onBack }) => {
     <div className="page-content">
       <div className="detail-header">
         <div className="detail-header-content">
-          <button onClick={onBack} style={{ padding: '8px', fontSize: '24px', background: 'none', border: 'none', cursor: 'pointer' }}>‹</button>
+          <button onClick={onBack} >
+            <img src={leftArrow} alt='뒤로가기'></img>
+          </button>
           <h1 style={{ fontSize: '18px', fontWeight: 'bold', flex: 1, textAlign: 'center' }}>이벤트</h1>
-          <button onClick={onBack} style={{ padding: '8px', fontSize: '24px', background: 'none', border: 'none', cursor: 'pointer' }}>✕</button>
+          <button onClick={onBack} >
+            <img src={mainClose} alt='닫기'></img>
+          </button>
         </div>
 
         <div className="tabs">
