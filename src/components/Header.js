@@ -41,7 +41,7 @@ const Header = ({
       case "event":
         return (
           <>
-            <button onClick={onBack}>
+            <button onClick={onBack} className="back-btn">
               <img src={leftArrow} alt="뒤로가기"></img>
             </button>
             <div className="header-title">
@@ -75,7 +75,7 @@ const Header = ({
               <img src={leftArrow} alt="뒤로가기"></img>
             </button>
             <div className="header-title">
-              <h2>시그니처 케이크</h2>
+              <h2>메뉴</h2>
             </div>
             <button onClick={onBack}>
               <img src={mainClose} alt="닫기"></img>
@@ -105,7 +105,7 @@ const Header = ({
               <img src={leftArrow} alt="뒤로가기"></img>
             </button>
             <div className="header-title">
-              <h2>포인트</h2>
+              <h2>마이페이지</h2>
             </div>
             <button onClick={onBack}>
               <img src={mainClose} alt="닫기"></img>

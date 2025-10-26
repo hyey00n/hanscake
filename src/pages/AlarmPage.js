@@ -27,7 +27,7 @@ const AlarmPage = ({ CloseBtn, onBack, maxWidth }) => {
         <button className="alarm-tab-btn active">전체</button>
         <button className="alarm-tab-btn">주문</button>
         <button className="alarm-tab-btn">프로모션</button>
-        <button className="alarm-tab-btn">스탬프/쿠폰</button>
+        <button className="alarm-tab-btn">스탬프</button>
         <button className="alarm-tab-btn">선물</button>
       </div>
 

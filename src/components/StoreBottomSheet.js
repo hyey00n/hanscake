@@ -4,6 +4,8 @@ import hansImg2 from "../assets/images/hans2.jpg";
 import hansImg3 from "../assets/images/hans3.jpg";
 import hansImg4 from "../assets/images/hans4.jpg";
 import hansImg5 from "../assets/images/hans5.jpg";
+import mainClose from "../assets/svg/main_close.svg";
+import search from "../assets/svg/search.svg";
 
 const StoreBottomSheet = ({ isOpen, onClose, onStoreSelect }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -69,19 +71,7 @@ const StoreBottomSheet = ({ isOpen, onClose, onStoreSelect }) => {
           <div className="header-top">
             <h2>매장선택</h2>
             <button className="close-btn" onClick={onClose}>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path
-                  d="M18 6L6 18M6 6l12 12"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <img src={mainClose} alt="닫기"></img>
             </button>
           </div>
 
@@ -94,25 +84,12 @@ const StoreBottomSheet = ({ isOpen, onClose, onStoreSelect }) => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             <button className="search-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <circle cx="11" cy="11" r="8" strokeWidth="2" />
-                <path
-                  d="M21 21l-4.35-4.35"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <img src={search} alt="찾기" />
             </button>
           </div>
 
           {/* Tabs */}
-          <div className="tabs">
+          <div className="store-tabs">
             <button
               className={`tab ${activeTab === "nearby" ? "active" : ""}`}
               onClick={() => setActiveTab("nearby")}
@@ -129,6 +106,7 @@ const StoreBottomSheet = ({ isOpen, onClose, onStoreSelect }) => {
         </div>
 
         {/* Store List */}
+        <div className="store-list-wrapper">
         <div className="store-list">
           {stores.map((store) => (
             <div
@@ -170,6 +148,7 @@ const StoreBottomSheet = ({ isOpen, onClose, onStoreSelect }) => {
               </button>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </>

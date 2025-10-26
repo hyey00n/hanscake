@@ -16,41 +16,47 @@ const HomePage = ({ onCakeClick, onPageChange, isLoggedIn }) => (
       <div className="section-header">
         <h3 className="section-title">한스케이크 TOP 10</h3>
         <button className="more-btn">
-          더보기 
-          <img src={rightArrow} alt="화살표" style={{ width :'14px' }} ></img>
+          더보기
+          <img src={rightArrow} alt="화살표" style={{ width: "14px" }}></img>
         </button>
       </div>
       <p style={{ fontSize: "16px", marginBottom: "34px" }}>
         빠르게 픽업할수 있는 상품이에요.
       </p>
-
-      {cakesData.map((cake) => (
-        <div
-          key={cake.id}
-          onClick={() => onCakeClick(cake)}
-          className="cake-item" 
-        >
-          <div className="cake-rank" >
-            {cake.rankType === "image" ? (
-              <img src={cake.rank} alt="랭크"></img>
-            ) : (
-              <span className="rank-text" style={{ color: cake.color , fontSize : '16px'   }}>{cake.rank} </span>
-            )}
+      <div className="cakeItem-warp">
+        {cakesData.map((cake) => (
+          <div
+            key={cake.id}
+            onClick={() => onCakeClick(cake)}
+            className="cake-item"
+          >
+            <div className="cake-rank">
+              {cake.rankType === "image" ? (
+                <img src={cake.rank} alt="랭크"></img>
+              ) : (
+                <span
+                  className="rank-text"
+                  style={{ color: cake.color, fontSize: "16px" }}
+                >
+                  {cake.rank}{" "}
+                </span>
+              )}
+            </div>
+            <div className="cake-image">
+              <img
+                src={cake.image}
+                alt={cake.name}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
+            <div className="cake-info">
+              <p className="cake-category">초코파운드케익</p>
+              <p className="cake-name">{cake.name}</p>
+              <p className="cake-price">{cake.price.toLocaleString()}원</p>
+            </div>
           </div>
-          <div className="cake-image">
-            <img
-              src={cake.image}
-              alt={cake.name}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </div>
-          <div className="cake-info">
-            <p className="cake-category">초코파운드케익</p>
-            <p className="cake-name">{cake.name}</p>
-            <p className="cake-price">{cake.price.toLocaleString()}원</p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
 
     <div className="coupon-event"></div>

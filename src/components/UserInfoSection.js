@@ -12,8 +12,11 @@ const UserInfoSection = ({ isLoggedIn }) => {
         <p className="welcome-text">우리잇님 반갑습니다</p>
         <div className="gold-card">
           <div className="gold-header">
+            <div className='gold-title'>
             <span style={{ fontWeight: 'bold' }}>Gold</span>
             <span style={{ fontSize: '14px' }}>최종 목표 달성을 축하드려요</span>
+            </div>
+
             <span style={{ fontWeight: 'bold' }}>Gold</span>
           </div>
           <div className="gold-progress-bg">
