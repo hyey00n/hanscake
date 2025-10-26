@@ -3,12 +3,10 @@ import eventBanner1 from "../assets/images/event_banner1.jpg";
 import eventBanner2 from "../assets/images/event_banner2.jpg";
 import eventBanner3 from "../assets/images/event_banner3.jpg";
 
-
-import leftArrow from '../assets/svg/left_arrow.svg';
-import mainClose from '../assets/svg/main_close.svg';
+import leftArrow from "../assets/svg/left_arrow.svg";
+import mainClose from "../assets/svg/main_close.svg";
 
 const EventPage = ({ onBack }) => {
-
   const events = [
     {
       id: 1,
@@ -26,7 +24,7 @@ const EventPage = ({ onBack }) => {
       endDate: "2025.03.03",
       status: "ongoing",
     },
-        {
+    {
       id: 3,
       image: eventBanner3,
       title: "한스야 생일축하해 [아아 + 조각케이크 무료]",
@@ -36,19 +34,9 @@ const EventPage = ({ onBack }) => {
     },
   ];
 
-
   return (
     <div className="page-content">
       <div className="detail-header">
-        <div className="detail-header-content">
-          <button onClick={onBack} >
-            <img src={leftArrow} alt='뒤로가기'></img>
-          </button>
-          <h1 style={{ fontSize: '18px', fontWeight: 'bold', flex: 1, textAlign: 'center' }}>이벤트</h1>
-          <button onClick={onBack} >
-            <img src={mainClose} alt='닫기'></img>
-          </button>
-        </div>
 
         <div className="tabs">
           <button className="tab-btn">진행중</button>
@@ -70,7 +58,6 @@ const EventPage = ({ onBack }) => {
           </div>
         ))}
       </div>
-
     </div>
   );
 };

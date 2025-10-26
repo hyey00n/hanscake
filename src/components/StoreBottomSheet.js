@@ -62,7 +62,7 @@ const StoreBottomSheet = ({ isOpen, onClose, onStoreSelect }) => {
       {/* Bottom Sheet */}
       <div
         className={`bottom-sheet ${isOpen ? "open" : ""}`}
-        style={{ maxWidth: "448px", margin: "0 auto" }}
+        style={{ maxWidth: "600px", margin: "0 auto" }}
       >
         {/* Header */}
         <div className="bottom-sheet-header">

@@ -2,6 +2,7 @@ import React from "react";
 import UserInfoSection from "../components/UserInfoSection";
 import { cakesData } from "../data/cakesData";
 import banner from "../assets/images/banner.png";
+import rightArrow from "../assets/svg/right_arrow.svg";
 
 const HomePage = ({ onCakeClick, onPageChange, isLoggedIn }) => (
   <div className="page-content">
@@ -15,7 +16,8 @@ const HomePage = ({ onCakeClick, onPageChange, isLoggedIn }) => (
       <div className="section-header">
         <h3 className="section-title">한스케이크 TOP 10</h3>
         <button className="more-btn">
-          더보기 <span>›</span>
+          더보기 
+          <img src={rightArrow} alt="화살표" style={{ width :'14px' }} ></img>
         </button>
       </div>
       <p style={{ fontSize: "16px", marginBottom: "34px" }}>
@@ -26,13 +28,13 @@ const HomePage = ({ onCakeClick, onPageChange, isLoggedIn }) => (
         <div
           key={cake.id}
           onClick={() => onCakeClick(cake)}
-          className="cake-item"
+          className="cake-item" 
         >
-          <div className="cake-rank" style={{ backgroundColor: cake.color }}>
+          <div className="cake-rank" >
             {cake.rankType === "image" ? (
               <img src={cake.rank} alt="랭크"></img>
             ) : (
-              <span className="rank-text">{cake.rank} </span>
+              <span className="rank-text" style={{ color: cake.color , fontSize : '16px'   }}>{cake.rank} </span>
             )}
           </div>
           <div className="cake-image">

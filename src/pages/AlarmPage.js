@@ -34,7 +34,7 @@ const AlarmPage = ({ CloseBtn, onBack, maxWidth }) => {
       {alarms.map((alarm) => (
         <div key={alarm.id} className="alarm-wrap">
           <div className="text">
-            <h3 style={{fontSize :'18px' }}>{alarm.title}</h3>
+            <h3 style={{fontSize :'18px' , paddingBottom : '4px' }}>{alarm.title}</h3>
             <p style={{fontSize :'14px' }} > {alarm.time}</p>
           </div>
           <button onClick={() => handleDelete(alarm.id)} className="close-icon">

@@ -13,10 +13,12 @@ const HansRabbitApp = () => {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedCake, setSelectedCake] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const maxWidth = '448px';
+  const [quantity, setQuantity] = useState(1); // quantity state 추가
+  const maxWidth = '600px';
 
   const handleCakeClick = (cake) => {
     setSelectedCake(cake);
+    setQuantity(1); // 새로운 케이크 선택 시 수량 초기화
     setCurrentPage('detail');
   };
 
@@ -26,7 +28,17 @@ const HansRabbitApp = () => {
 
   return (
     <div className="app-container" style={{ maxWidth }}>
-      <Header isLoggedIn={isLoggedIn} onLoginClick={handleLoginClick} />
+      <Header 
+        isLoggedIn={isLoggedIn} 
+        onLoginClick={handleLoginClick}
+        pageType={currentPage}
+        selectedCake={selectedCake}
+        onBack={() => {
+          if (currentPage === 'detail' || currentPage === 'signature' || currentPage === 'points') {
+            setCurrentPage('home');
+          }
+        }}
+      />
 
       {currentPage === 'event' && (
         <EventPage 
@@ -42,7 +54,7 @@ const HansRabbitApp = () => {
           isLoggedIn={isLoggedIn}
         />
       )}    
-            {currentPage === 'alarm' && (
+      {currentPage === 'alarm' && (
         <AlarmPage 
           onCakeClick={handleCakeClick} 
           onPageChange={setCurrentPage}
@@ -61,6 +73,8 @@ const HansRabbitApp = () => {
           cake={selectedCake} 
           onBack={() => setCurrentPage('home')}
           maxWidth={maxWidth}
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
       )}
       
@@ -68,7 +82,14 @@ const HansRabbitApp = () => {
         <PointsPage onBack={() => setCurrentPage('home')} />
       )}
       
-      <BottomNav currentPage={currentPage} onPageChange={setCurrentPage} maxWidth={maxWidth} />
+      <BottomNav 
+        currentPage={currentPage} 
+        onPageChange={setCurrentPage} 
+        maxWidth={maxWidth}
+        selectedCake={selectedCake}
+        quantity={quantity}
+        setQuantity={setQuantity}
+      />
     </div>
   );
 };

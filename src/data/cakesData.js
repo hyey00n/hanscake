@@ -17,8 +17,8 @@ export const cakesData = [
   { id: 1, name: '초코파운드 치즈타르트', price: 69000, image: cakeImg, rankType: 'image', rank: gold, color: '#f59e0b' },
   { id: 2, name: '딸기 체리베리 치즈타르트', price: 69000, image: strawberryImg, rankType: 'image', rank: silver, color: '#d1d5db' },
   { id: 3, name: '딸기 치즈타르트', price: 69000, image: strawberryImg, rankType: 'image', rank: bronze, color: '#fb923c' },
-  { id: 4, name: '청포도 생크림', price: 69000, image: grapeImg, rank: 4, color: '#e5e7eb' },
-  { id: 5, name: '망고 생크림', price: 69000, image: mangoImg, rank: 5, color: '#e5e7eb' },
+  { id: 4, name: '청포도 생크림', price: 69000, image: grapeImg, rank: 4, color: '#6C6C6C' },
+  { id: 5, name: '망고 생크림', price: 69000, image: mangoImg, rank: 5, color: '#6C6C6C' },
 ];
 
 export const signatureCakesData = [
