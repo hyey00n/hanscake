@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hanscake/static/css/main.d22b42f8.css",
-    "main.js": "/hanscake/static/js/main.7edc6db3.js",
+    "main.css": "/hanscake/static/css/main.68f3c7ff.css",
+    "main.js": "/hanscake/static/js/main.2a01b930.js",
     "static/js/453.1aecb12e.chunk.js": "/hanscake/static/js/453.1aecb12e.chunk.js",
     "static/media/banner.png": "/hanscake/static/media/banner.e673236401cf1a5cbea0.png",
     "static/media/event_banner2.jpg": "/hanscake/static/media/event_banner2.fbd17ec3564210db5372.jpg",
@@ -42,12 +42,12 @@
     "static/media/right_arrow.svg": "/hanscake/static/media/right_arrow.393813f74f1ff4bb266047f128ca3522.svg",
     "static/media/main_close.svg": "/hanscake/static/media/main_close.4d0e447aa60cdc17eead6918251405ef.svg",
     "static/media/left_arrow.svg": "/hanscake/static/media/left_arrow.04647c593e8931d25a7a7c8638a127be.svg",
-    "main.d22b42f8.css.map": "/hanscake/static/css/main.d22b42f8.css.map",
-    "main.7edc6db3.js.map": "/hanscake/static/js/main.7edc6db3.js.map",
+    "main.68f3c7ff.css.map": "/hanscake/static/css/main.68f3c7ff.css.map",
+    "main.2a01b930.js.map": "/hanscake/static/js/main.2a01b930.js.map",
     "453.1aecb12e.chunk.js.map": "/hanscake/static/js/453.1aecb12e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d22b42f8.css",
-    "static/js/main.7edc6db3.js"
+    "static/css/main.68f3c7ff.css",
+    "static/js/main.2a01b930.js"
   ]
 }
