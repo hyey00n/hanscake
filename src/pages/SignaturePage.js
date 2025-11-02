@@ -4,6 +4,7 @@ import StoreBottomSheet from "../components/StoreBottomSheet";
 
 import leftArrow from "../assets/svg/left_arrow.svg";
 import mainClose from "../assets/svg/main_close.svg";
+import shoppingBag from "../assets/svg/shopping_bag.svg";
 
 const SignaturePage = ({ onCakeClick, onBack }) => {
   const [isStoreSheetOpen, setIsStoreSheetOpen] = useState(false);
@@ -86,63 +87,40 @@ const SignaturePage = ({ onCakeClick, onBack }) => {
         </div>
       </div>
 
-      <div
-        style={{
-          padding: "16px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "12px",
-        }}
-      >
+      <div className="cake-grid">
         {signatureCakesData.map((cake) => (
           <div
             key={cake.id}
             onClick={() => handleCakeClick(cake)}
-            className="cake-item"
-            style={{ cursor: "pointer" }}
+            className="cake-card"
+            style={
+              {
+                // border: "1px solid blue",
+              }
+            }
           >
-            <div
-              style={{
-                width: "100px",
-                height: "100px",
-                backgroundColor: cake.color,
-                marginRight: "16px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "40px",
-                overflow: "hidden",
-              }}
-            >
-              <img
-                src={cake.image}
-                alt={cake.name}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
+            <div className="cake-card-image">
+              <img src={cake.image} alt={cake.name} />
             </div>
-            <div style={{ flex: 1 }}>
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontWeight: "bold",
-                  color: "#FF552E",
-                  marginBottom: "4px",
-                }}
-              >
-                {cake.name}
-              </p>
-              <p
-                style={{
-                  fontSize: "16px",
-                  color: "#6b7280",
-                  marginBottom: "8px",
-                }}
-              >
-                {cake.subtitle}
-              </p>
-              <p style={{ fontSize: "20px", fontWeight: "bold" }}>
-                {cake.price.toLocaleString()}원
-              </p>
+            <div className="cake-card-content">
+              <p className="cake-name mb-2">{cake.name}</p>
+              <div className="flex">
+                <p className="cake-discount mb-2">{cake.price}원</p>
+                <p className="cake-price mb-2">
+                  {cake.price.toLocaleString()}원
+                </p>
+              </div>
+              <p className="explanation"> {cake.subtitle}</p>
+              <div className="flex space-between">
+                <div className="flex">
+                  <p className="sale">SALE</p>
+                  <p className="best">BEST</p>
+                </div>
+
+                {/* <p className="new">BEST</p> */}
+                {/* <p className="limitend">LIMITED</p> */}
+                <img src={shoppingBag} alt="장바구니"></img>
+              </div>
             </div>
           </div>
         ))}

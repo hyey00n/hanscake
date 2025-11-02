@@ -3,9 +3,27 @@ import UserInfoSection from "../components/UserInfoSection";
 import { cakesData } from "../data/cakesData";
 import banner from "../assets/images/banner.png";
 import rightArrow from "../assets/svg/right_arrow.svg";
+import mainCoupon from "../assets/svg/main_coupon.svg";
+import mainStamp from "../assets/svg/main_stamp.svg";
+import payment from "../assets/svg/payment.svg";
+import shoppingBag from "../assets/svg/shopping_bag.svg";
 
 const HomePage = ({ onCakeClick, onPageChange, isLoggedIn }) => (
   <div className="page-content">
+    <div className="header_button">
+      <button className="header_button_item">
+        <img src={mainCoupon}></img>
+        <span>coupon</span>
+      </button>
+      <button className="header_button_item">
+        <img src={mainStamp}></img>
+        <span>stamp</span>
+      </button>
+      <button className="header_button_item">
+        <img src={payment}></img>
+        <span>Easy payment</span>
+      </button>
+    </div>
     <div className="anniversary-banner">
       <img src={banner}></img>
     </div>
@@ -30,36 +48,16 @@ const HomePage = ({ onCakeClick, onPageChange, isLoggedIn }) => (
             onClick={() => onCakeClick(cake)}
             className="cake-item"
           >
-            <div className="cake-rank">
-              {cake.rankType === "image" ? (
-                <img src={cake.rank} alt="랭크"></img>
-              ) : (
-                <span
-                  className="rank-text"
-                  style={{ color: cake.color, fontSize: "16px" }}
-                >
-                  {cake.rank}{" "}
-                </span>
-              )}
-            </div>
             <div className="cake-image">
-              <img
-                src={cake.image}
-                alt={cake.name}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
+              <img src={cake.image} alt={cake.name} />
             </div>
-            <div className="cake-info">
-              <p className="cake-category">초코파운드케익</p>
+            <div>
               <p className="cake-name">{cake.name}</p>
-              <p className="cake-price">{cake.price.toLocaleString()}원</p>
             </div>
           </div>
         ))}
       </div>
     </div>
-
-    <div className="coupon-event"></div>
 
     <div className="tabs">
       <button className="tab-btn active">프리미엄</button>
@@ -77,16 +75,25 @@ const HomePage = ({ onCakeClick, onPageChange, isLoggedIn }) => (
           className="cake-card"
         >
           <div className="cake-card-image">
-            <img
-              src={cake.image}
-              alt={cake.name}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
+            <img src={cake.image} alt={cake.name} />
           </div>
           <div className="cake-card-content">
-            <p className="cake-category">초코파운드케익</p>
             <p className="cake-name mb-2">{cake.name}</p>
-            <p className="cake-price">{cake.price.toLocaleString()}원</p>
+            <div className="flex">
+              <p className="cake-discount mb-2">{cake.price}원</p>
+              <p className="cake-price mb-2">{cake.price.toLocaleString()}원</p>
+            </div>
+            <p className="explanation"> {cake.subtitle}</p>
+            <div className="flex space-between">
+              <div className="flex">
+                <p className="sale">SALE</p>
+                <p className="best">BEST</p>
+              </div>
+
+              {/* <p className="new">BEST</p> */}
+              {/* <p className="limitend">LIMITED</p> */}
+              <img src={shoppingBag} alt="장바구니"></img>
+            </div>
           </div>
         </div>
       ))}

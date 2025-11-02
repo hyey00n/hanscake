@@ -1,7 +1,6 @@
 import React from "react";
 import search from "../assets/svg/search.svg";
 import shopping from "../assets/svg/shopping_bag.svg";
-
 import leftArrow from "../assets/svg/left_arrow.svg";
 import mainClose from "../assets/svg/main_close.svg";
 
@@ -11,25 +10,23 @@ const Header = ({
   pageType = "home",
   selectedCake,
   onBack,
+  onPageChange, // 추가!
 }) => {
   const renderHeaderContent = () => {
     switch (pageType) {
       case "home":
         return (
-          <>
-            <div className="header-search-bar">
-              <input type="text" placeholder="매장을 검색해주세요" />
-              <button className="search-icon">
-                <img src={search} alt="찾기" />
-              </button>
-            </div>
+          < >
+            <h3 >
+              안녕하세요 로그인해주세요.
+            </h3>
             <div className="header-actions">
               {!isLoggedIn ? (
                 <>
-                  <button onClick={onLoginClick} className="header-btn">
+                  <button onClick={() => onPageChange('login')}>
                     로그인
                   </button>
-                  <button className="header-btn">회원가입</button>
+                
                 </>
               ) : (
                 <img src={shopping} alt="장바구니" />
@@ -106,6 +103,51 @@ const Header = ({
             </button>
             <div className="header-title">
               <h2>마이페이지</h2>
+            </div>
+            <button onClick={onBack}>
+              <img src={mainClose} alt="닫기"></img>
+            </button>
+          </>
+        );
+
+      case "login": // 로그인 페이지 헤더 추가!
+        return (
+          <>
+            <button onClick={onBack} className="back-btn">
+              <img src={leftArrow} alt="뒤로가기"></img>
+            </button>
+            <div className="header-title">
+              <h2>로그인</h2>
+            </div>
+            <button onClick={onBack}>
+              <img src={mainClose} alt="닫기"></img>
+            </button>
+          </>
+        );
+
+      case "cart": // 장바구니 페이지 헤더 추가!
+        return (
+          <>
+            <button onClick={onBack} className="back-btn">
+              <img src={leftArrow} alt="뒤로가기"></img>
+            </button>
+            <div className="header-title">
+              <h2>장바구니</h2>
+            </div>
+            <button onClick={onBack}>
+              <img src={mainClose} alt="닫기"></img>
+            </button>
+          </>
+        );
+
+      case "checkout": // 결제 페이지 헤더 추가!
+        return (
+          <>
+            <button onClick={onBack} className="back-btn">
+              <img src={leftArrow} alt="뒤로가기"></img>
+            </button>
+            <div className="header-title">
+              <h2>결제하기</h2>
             </div>
             <button onClick={onBack}>
               <img src={mainClose} alt="닫기"></img>

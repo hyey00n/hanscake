@@ -1,4 +1,5 @@
 import React from "react";
+// import { useNavigate } from 'react-router-dom'; ← 이 줄 삭제!
 import homeOn from "../assets/svg/home_on.svg";
 import homeOff from "../assets/svg/home_off.svg";
 import alarmOn from "../assets/svg/alarm_on.svg";
@@ -13,6 +14,7 @@ import shopping from "../assets/svg/shopping_bag.svg";
 import down from "../assets/svg/down.svg";
 import upAdd from "../assets/svg/up.svg";
 
+
 const BottomNav = ({ 
   currentPage, 
   onPageChange, 
@@ -21,6 +23,8 @@ const BottomNav = ({
   quantity, 
   setQuantity 
 }) => {
+  // const navigate = useNavigate(); ← 이 줄 삭제!
+  
   // 디테일 페이지일 때 액션 버튼 표시
   if (currentPage === "detail" && selectedCake) {
     return (
@@ -50,11 +54,17 @@ const BottomNav = ({
           </div>
         </div>
         <div className="action-buttons-content" style={{ maxWidth }}>
-          <button className="btn-cart">
+          <button 
+            className="btn-cart"
+            onClick={() => onPageChange('cart')}
+          >
             <img src={shopping} alt="장바구니" />
             <p>장바구니</p>
           </button>
-          <button className="btn-order">
+          <button 
+            className="btn-order"
+            onClick={() => onPageChange('checkout')}
+          >
             주문하기
           </button>
         </div>
