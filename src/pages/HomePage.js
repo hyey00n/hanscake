@@ -38,7 +38,7 @@ const HomePage = ({ onCakeClick, onPageChange, isLoggedIn }) => (
           <img src={rightArrow} alt="화살표" style={{ width: "14px" }}></img>
         </button>
       </div>
-      <p style={{ fontSize: "16px", marginBottom: "34px" }}>
+      <p style={{ fontSize: "16px", marginBottom: "34px" , padding :'0 16px' }}>
         빠르게 픽업할수 있는 상품이에요.
       </p>
       <div className="cakeItem-warp">
