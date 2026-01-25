@@ -1,0 +1,22 @@
+/* SignaturePage.css */
+
+/* .signature-page { padding: 20px 16px 100px; background: #FAFAF8; min-height: 100vh; }
+.page-header { text-align: center; padding: 20px 0 30px; }
+.page-header h1 { font-size: 24px; font-weight: 700; color: #2C2C2C; margin-bottom: 8px; }
+.page-header p { font-size: 14px; color: #666; }
+.cake-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 600px; margin: 0 auto; }
+.cake-card { background: white; border-radius: 16px; overflow: hidden; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.cake-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+.cake-image { position: relative; padding-bottom: 100%; overflow: hidden; }
+.cake-image img { position: absolute; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.cake-card:hover .cake-image img { transform: scale(1.1); }
+.wishlist-btn { position: absolute; top: 12px; right: 12px; background: white; border: none; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.wishlist-btn:hover { background: #FFE5E5; color: #FF6B6B; transform: scale(1.1); }
+.cake-info { padding: 16px; }
+.cake-info h3 { font-size: 15px; font-weight: 600; color: #2C2C2C; margin-bottom: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cake-rating { display: flex; align-items: center; gap: 4px; margin-bottom: 8px; }
+.cake-rating span { font-size: 13px; color: #666; font-weight: 500; }
+.cake-price { font-size: 16px; font-weight: 700; color: #D4A574; }
+@media (min-width:600px) {
+  .cake-grid { grid-template-columns: repeat(3, 1fr); }
+} */

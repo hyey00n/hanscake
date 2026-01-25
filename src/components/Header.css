@@ -1,0 +1,31 @@
+/* Header.css */
+
+.header { position: sticky; top: 0; background-color: white;  z-index: 1000;  }
+.header-content { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 50px; }
+.header-logo{background: url(../../src/assets/svg/Capérie.svg) no-repeat center/cover; width: 100px; height: 30px; display: inline-block;}
+.header-left, .header-right { display: flex; align-items: center; gap: 8px; }
+.header-left { justify-content: flex-start; }
+.header-right { justify-content: flex-end; }
+.header-spacer { width: 40px; }
+.header-center { display: flex; justify-content: center; align-items: center; }
+.header-title { font-size: 17px; font-weight: 600; color: #2C2C2C;  }
+.header-btn { width: 40px; height: 40px; border: none; background: none; color: #2C2C2C; cursor: pointer; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+
+
+
+/* Sub Header */
+.sub-header { background: var(--main100); color:white; padding: 12px 16px;  }
+.welcome-message { max-width: 600px; margin: 0 auto; text-align: center; font-size: 14px;  }
+.login-prompt {  font-weight: 300; cursor: pointer; transition: color 0.3s ease; }
+.login-prompt button {padding: 4px 12px; border-radius: 50px; background-color: white; }
+.login-prompt button:hover {color: var(--main100); transition: color 0.3s ease;}
+
+
+
+
+/* Animations */
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.header { animation: slideDown 0.3s ease-out; }

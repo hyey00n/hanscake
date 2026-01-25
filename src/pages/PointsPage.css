@@ -1,0 +1,19 @@
+/* PointsPage.css */
+
+.points-page { min-height: 100vh; padding-bottom: 100px; }
+.user-profile { background: linear-gradient(135deg, var(--main100) 0%, var(--main400) 100%); padding: 40px 16px; text-align: center; color: white; }
+.profile-avatar { width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 3px solid rgba(255,255,255,0.3); }
+.profile-info h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.profile-info p { font-size: 14px; opacity: 0.9; }
+.points-card { background: white; margin: -20px 16px 16px; padding: 16px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex;  position: relative; z-index: 10; }
+.points-item { flex: 1; text-align: center; }
+.points-label { display: block; font-size: 13px; color: #666; margin-bottom: 8px; }
+.points-value { display: block; font-size: 20px; font-weight: 700; color: var(--main100); }
+.points-divider { width: 1px; background: #E8E8E8; }
+.menu-section { background: white; margin-bottom: 16px; }
+.menu-item { width: 100%; display: flex; align-items: center; gap: 8px; padding: 18px 16px; border: none; background: white; border-bottom: 1px solid #F0F0F0; cursor: pointer; transition: background 0.3s ease; }
+.menu-item:hover { background: #FAFAF8; }
+.menu-item:last-child { border-bottom: none; }
+.menu-icon { width: 40px; height: 40px; border-radius: 50%; background: #FFF8F0; display: flex; align-items: center; justify-content: center; color: var(--main100); }
+.menu-item span { flex: 1; text-align: left; font-size: 15px; font-weight: 500; color: #2C2C2C; }
+.menu-arrow { color: #999; }

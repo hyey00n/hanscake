@@ -1,0 +1,16 @@
+/* EventPage.css */
+
+.event-page { padding: 20px 16px; min-height: 100vh; }
+.event-list { display: flex; flex-direction: column; gap: 16px; max-width: 600px; margin: 0 auto; }
+.event-card { background: white; overflow: hidden; cursor: pointer; transition: all 0.3s ease; position: relative; border: 1px solid var(--color200); }
+.event-card:hover { transform: translateY(-4px); }
+.event-badge { position: absolute; top: 0px; left: 0px; padding: 6px 12px; font-size: 14px; z-index: 2; min-width: 70px; text-align: center; }
+.event-badge.upcoming { background: #cc7a0f; color: white; }
+.event-badge.ongoing { background: #FF6B6B; color: #ffffff; }
+.event-badge.closed { background: #909090; color: #e2e2e2; }
+.event-image { width: 100%; padding-bottom: 50%; position: relative; overflow: hidden; }
+.event-image img { position: absolute; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.event-card:hover .event-image img { transform: scale(1.05); }
+.event-content { padding: 8px 12px; }
+.event-content h3 { font-size: 18px; font-weight: 700; color: #2C2C2C; padding-bottom: 6px; }
+.event-content p { font-size: 14px; color: var(--color600) }
