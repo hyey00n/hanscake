@@ -84,6 +84,32 @@ function App() {
     setCurrentPage('cart');
   };
 
+  // 구매하기 (장바구니 추가 + 이동) ⭐ 새로 추가
+  const handleBuyNow = () => {
+    if (currentPage === 'detail' && selectedCake) {
+      const selectedSizeOption = [
+        { size: '1호', serves: '2-4인', price: (selectedCake.price || 0) - 8000 },
+        { size: '2호', serves: '4-6인', price: selectedCake.price || 0 },
+        { size: '3호', serves: '6-8인', price: (selectedCake.price || 0) + 12000 }
+      ].find(opt => opt.size === selectedSize);
+
+      const cartItem = {
+        id: selectedCake.id,
+        name: selectedCake.name,
+        brand: selectedCake.brand,
+        image: selectedCake.image,
+        selectedSize: selectedSize,
+        serves: selectedSizeOption?.serves || '',
+        price: selectedSizeOption?.price || 0,
+        quantity: quantity,
+        totalPrice: (selectedSizeOption?.price || 0) * quantity
+      };
+      
+      addToCart(cartItem);
+      setCurrentPage('cart'); // 장바구니 페이지로 이동
+    }
+  };
+
   // 결제 페이지로 이동
   const goToCheckout = () => {
     if (cartItems.length === 0) {
@@ -126,7 +152,7 @@ function App() {
         
         {/* 홈 페이지 */}
         {currentPage === 'home' && (
-          <HomePage onCakeClick={handleCakeClick} />
+          <HomePage onCakeClick={handleCakeClick} onPageChange={setCurrentPage} />
         )}
 
         {/* 시그니처 페이지 */}
@@ -146,7 +172,7 @@ function App() {
 
         {/* 알림 페이지 */}
         {currentPage === 'alarm' && (
-          <AlarmPage />
+          <AlarmPage onPageChange={setCurrentPage} />
         )}
 
         {/* 로그인 페이지 */}
@@ -216,7 +242,7 @@ function App() {
               addToCart(cartItem);
             }
           }}
-          onGoToCart={goToCart}
+          onGoToCart={handleBuyNow} // ⭐ 여기 변경! goToCart → handleBuyNow
         />
       </div>
     </div>

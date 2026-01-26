@@ -24,11 +24,11 @@
 .address-search-btn:hover { background: #E8E8E8; }
 .address-detail { margin-top: 8px; }
 /* Payment Methods */
-.payment-methods { display: grid; gap: 12px; }
-.payment-method { display: flex; align-items: center; gap: 12px; padding: 16px; border: 2px solid #E8E8E8; border-radius: 12px; background: white; cursor: pointer; position: relative; transition: all 0.3s ease; }
+.payment-methods { display: grid; gap: 8px; }
+.payment-method {  justify-content: center; display: flex; align-items: center; gap: 4px; padding: 6px 8px; border: 2px solid #E8E8E8; border-radius: 12px; background: white; cursor: pointer; position: relative; transition: all 0.3s ease; }
 .payment-method:hover { border-color: var(--main100); }
-.payment-method.active { border-color: var(--main100); background: #FFF8F0; }
-.payment-method span { flex: 1; font-size: 15px; font-weight: 600; color: #2C2C2C; }
+.payment-method.active { border: 2px solid var(--main100); background: #FFF8F0;  }
+.payment-method span {  font-size: 15px; font-weight: 600; color: #2C2C2C; }
 .check-icon { color: var(--main100); }
 .kakao-icon { width: 24px; height: 24px; border-radius: 50%; background: #FEE500; color: #3C1E1E; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; }
 /* Price Summary */

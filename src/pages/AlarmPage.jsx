@@ -35,16 +35,10 @@ const AlarmPage = ({ onCakeClick, onPageChange, isLoggedIn }) => {
 
   return (
     <div className="alarm-page">
-      <div className="page-header">
-        <h1>알림</h1>
-        {isLoggedIn && (
-          <button className="mark-read-btn">모두 읽음</button>
-        )}
-      </div>
 
       {!isLoggedIn ? (
         <div className="empty-state">
-          <Bell size={48} color="#D4A574" />
+          <Bell size={48} color="#FF6B6B" />
           <h3>로그인이 필요합니다</h3>
           <p>알림을 받으려면 로그인해주세요</p>
           <button onClick={() => onPageChange('login')}>로그인</button>

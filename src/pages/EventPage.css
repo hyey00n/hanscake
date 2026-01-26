@@ -4,7 +4,7 @@
 .event-list { display: flex; flex-direction: column; gap: 16px; max-width: 600px; margin: 0 auto; }
 .event-card { background: white; overflow: hidden; cursor: pointer; transition: all 0.3s ease; position: relative; border: 1px solid var(--color200); }
 .event-card:hover { transform: translateY(-4px); }
-.event-badge { position: absolute; top: 0px; left: 0px; padding: 6px 12px; font-size: 14px; z-index: 2; min-width: 70px; text-align: center; }
+.event-badge { position: absolute; top: 0px; left: 0px; padding: 4px 12px; font-size: 14px; z-index: 2; min-width: 70px; text-align: center; }
 .event-badge.upcoming { background: #cc7a0f; color: white; }
 .event-badge.ongoing { background: #FF6B6B; color: #ffffff; }
 .event-badge.closed { background: #909090; color: #e2e2e2; }

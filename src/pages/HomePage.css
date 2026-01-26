@@ -1,56 +1,57 @@
-
 /* Hero Banner */
 .hero-banner { position: relative; width: 100%; height: 250px; overflow: hidden; margin-bottom: 20px; }
 .hero-banner img { width: 100%; height: 100%; object-fit: cover; }
 .hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, rgba(0,0,0,0.6), transparent); padding: 0 16px; z-index: 2; }
 .hero-title { font-size: 28px; color: white; margin-bottom: 12px; animation: fadeInUp 0.8s ease-out; }
 .hero-subtitle { font-size: 15px; color: white; animation: fadeInUp 0.8s ease-out 0.2s backwards; }
-
 /* 공통헤더 */
-.mb-12{margin-bottom: 12px; font-size: 14px;}
+.mb-12 { margin-bottom: 12px; font-size: 14px; }
 .more-btn { background: none; border: none; color: var(--color700); font-size: 14px; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: all 0.3s ease; }
-
-/* 브래드 */
-
-.brands {padding: 20px 16px; }
-.brands ul {display: flex; gap: 12px; overflow-x: auto; overflow-y: hidden;  flex-wrap: nowrap;   scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;}
-.brands ul::-webkit-scrollbar {display: none; }
-.brands li { flex-shrink: 0; width: 70px; height: 70px; border: 1px solid var(--color300); border-radius: 12px; overflow: hidden;  }
-.twosome{ background: url(../assets/logo/twosome.svg)no-repeat center/contain ;}
-.starbucks{ background: url(../assets/logo/starbucks.svg)no-repeat center/contain; background-color: #19654c; }
-.dessert39{ background: url(../assets/logo/dessert39.svg)no-repeat center/50%;  }
-.bake{ background: url(../assets/logo/bake.svg)no-repeat center/50%; background-color: #D4A373;}
-.godiva{ background: url(../assets/logo/godiva.svg)no-repeat center/85%;}
-.breadco{ background: url(../assets/logo/breadco.jpg)no-repeat center/90%;}
-.knotted{ background: url(../assets/logo/knotted.jpeg)no-repeat center/105%;}
-
-
-
+/* 브랜드 */
+.brands { padding: 20px 0px; overflow: visible; width: 100%; }
+.brands > .flex-between{padding: 0 16px;}
+/* 브랜드 리스트 - 부드러운 스크롤 */
+.brand-list {  padding: 0 16px; ;display: flex; gap: 12px; overflow-x: auto; overflow-y: hidden; flex-wrap: nowrap; scroll-snap-type: none; /* mandatory 제거 */
+  -webkit-overflow-scrolling: touch; width: 100%; touch-action: pan-x; -ms-overflow-style: none; scrollbar-width: none; scroll-behavior: auto; /* smooth 제거 */
+  cursor: grab; user-select: none; }
+.brand-list::-webkit-scrollbar { display: none; }
+.brand-list:active { cursor: grabbing; }
+.brand-list li { flex-shrink: 0; min-width: 70px; width: 70px; height: 70px; border: 1px solid var(--color300); border-radius: 12px; overflow: hidden; scroll-snap-align: none; /* 스냅 제거 */
+  pointer-events: none; }
+.twosome { background: url(../assets/logo/twosome.svg) no-repeat center/contain; }
+.starbucks { background: url(../assets/logo/starbucks.svg) no-repeat center/contain; background-color: #19654c; }
+.dessert39 { background: url(../assets/logo/dessert39.svg) no-repeat center/50%; }
+.bake { background: url(../assets/logo/bake.svg) no-repeat center/50%; background-color: #D4A373; }
+.godiva { background: url(../assets/logo/godiva.svg) no-repeat center/85%; }
+.breadco { background: url(../assets/logo/breadco.jpg) no-repeat center/90%; }
+.knotted { background: url(../assets/logo/knotted.jpeg) no-repeat center/105%; }
 /* Sub Categories */
-.categories { padding: 20px 16px; background: white; margin-bottom: 20px; border-bottom: 10px solid var(--color100); }
-.category-scroll { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.categories > .flex-between{padding: 0 16px;}
+.category-scroll { padding: 0 20px; display: flex; gap: 16px; overflow-x: auto; overflow-y: hidden; flex-wrap: nowrap; scroll-snap-type: none; 
+  -webkit-overflow-scrolling: touch; width: 100%; touch-action: pan-x; -ms-overflow-style: none; scrollbar-width: none; scroll-behavior: auto; 
+  cursor: grab; user-select: none; }
 .category-scroll::-webkit-scrollbar { display: none; }
-.category-item { color: var(--color900) ; flex-shrink: 0; scroll-snap-align: start; text-align: left; cursor: pointer; transition: transform 0.3s ease; font-size: 14px; }
-.category-image { width: 200px; height: 200px; border: 1px solid var(--color200) }
-.category-expected { font-size: 15px; font-weight: 600; color: var(--color600) ; }
+.category-scroll:active { cursor: grabbing; }
+.category-item { color: var(--color900); flex-shrink: 0; scroll-snap-align: none; /* 스냅 제거 */
+  text-align: left; cursor: pointer; transition: transform 0.3s ease; font-size: 14px; min-width: 200px; pointer-events: auto; }
+.category-image { width: 200px; height: 200px; border: 1px solid var(--color200); }
+.category-expected { font-size: 15px; font-weight: 600; color: var(--color600); }
 .category-price-info { gap: 4px; align-items: center; }
-.category-discount { font-size: 18px; font-weight: 600; color: var(--main100) ; }
+.category-discount { font-size: 18px; font-weight: 600; color: var(--main100); }
 .category-sale { font-size: 14px; font-weight: 300; color: var(--color600); text-decoration: line-through; }
 .category-price { font-size: 18px; font-weight: 700; color: var(--color900); }
 .category-badge { font-size: 11px; display: inline-block; padding: 2px 4px; border: 1px solid var(--color200); }
 /* Sections */
 .new-section, .reviews-section { padding: 20px 16px; }
-
-
 /* Cake Grid */
 .cake-grid { gap: 16px; }
-.cake-card { position: relative; align-items: center; gap: 8px; background: white; overflow: hidden; cursor: pointer; transition: all 0.3s ease;  }
+.cake-card { position: relative; align-items: center; gap: 8px; background: white; overflow: hidden; cursor: pointer; transition: all 0.3s ease; }
 .badge { position: absolute; top: 0px; left: 0px; color: white; font-size: 12px; display: inline-block; padding: 2px 4px; z-index: 2; min-width: 40px; text-align: center; }
-.badge.best { background: #FF6B6B;}
+.badge.best { background: #FF6B6B; }
 .cake-image { position: relative; overflow: hidden; width: 180px; height: 180px; border: 1px solid var(--color200); }
 .cake-image img { position: absolute; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
 .cake-card:hover .cake-image img { transform: scale(1.1); }
-.wishlist-btn { position: absolute; top: 12px; right: 12px; background: white; cursor: pointer; transition: all 0.3s ease; }
+.wishlist-btn { position: absolute; top: 12px; right: 12px; background: white; cursor: pointer; transition: all 0.3s ease; pointer-events: auto; }
 .cake-info { gap: 4px; }
 .cake-info h3 { font-size: 15px; color: var(--main700); }
 .cake-info span { font-size: 13px; color: var(--main700); line-height: 1.3; }
@@ -62,26 +63,13 @@
 .review-card { border: 1px solid var(--color200); padding: 16px 14px; display: flex; gap: 10px; transition: all 0.3s ease; }
 .review-image { flex-shrink: 0; width: 100px; height: 100px; overflow: hidden; }
 .review-image img { width: 100%; height: 100%; object-fit: cover; }
-.review-user { font-size: 16px; color: var(--main700) }
+.review-user { font-size: 16px; color: var(--main700); }
 .review-rating { display: flex; gap: 2px; }
-.review-comment ,.review-date { font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-
+.review-comment, .review-date { font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 /* home-footer */
-.home-footer{ background-color: var(--color800); padding: 30px 16px; color: var(--color500); font-size: 14px;} 
-
-
-
-
+.home-footer { background-color: var(--color800); padding: 30px 16px; color: var(--color500); font-size: 14px; }
 /* signature-page */
-.signature-page{padding: 20px 16px; }
-
-
-
-
-
-
-
+.signature-page { padding: 20px 16px; }
 /* Animations */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
@@ -90,10 +78,8 @@
 /* Responsive - 태블릿 */
 @media (min-width:768px) {
   .category-grid { grid-template-columns: repeat(4, 1fr); }
-  /* .new-section, .reviews-section { padding: 40px 24px; } */
 }
 /* 데스크톱에서 padding-bottom 제거 (BottomNav 없음) */
 @media (min-width:1024px) {
   .home-page { padding-bottom: 20px; }
-  /* .new-section, .reviews-section { padding: 40px 24px; } */
 }

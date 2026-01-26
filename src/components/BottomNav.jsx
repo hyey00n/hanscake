@@ -72,28 +72,31 @@ const BottomNav = ({ currentPage, onNavigate, totalPrice = 0, onAddToCart, onGoT
         </div>
       )}
 
-      {/* 상세페이지 버튼 */}
-      {showDetailButtons && (
-        <div className="action-buttons-double">
-          <div className="price-info">
-            <div className="price-label">총 금액</div>
-            <div className="price-value">{totalPrice.toLocaleString()}원</div>
-          </div>
-          <button 
-            className="action-buttons-single"
-            onClick={onAddToCart}
-          >
-            <ShoppingCart size={20} />
-            <span>장바구니</span>
-          </button>
-          <button 
-            className="buy-btn"
-            onClick={onGoToCart}
-          >
-            구매하기
-          </button>
-        </div>
-      )}
+{/* 상세페이지 버튼 */}
+{showDetailButtons && (
+  <div className="action-buttons-double">
+    <div className="price-info">
+      <div className="price-label">총 금액</div>
+      <div className="price-value">{totalPrice.toLocaleString()}원</div>
+    </div>
+    <button 
+      className="action-buttons-single"
+      onClick={onAddToCart}
+    >
+      <ShoppingCart size={20} />
+      <span>장바구니</span>
+    </button>
+    <button 
+      className="buy-btn"
+      onClick={() => {
+        onAddToCart(); // 먼저 장바구니에 추가
+        onGoToCart();  // 그 다음 장바구니 페이지로 이동
+      }}
+    >
+      구매하기
+    </button>
+  </div>
+)}
 
       {/* 장바구니 버튼 */}
       {showCartButton && (

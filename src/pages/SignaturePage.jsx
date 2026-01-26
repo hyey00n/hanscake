@@ -9,7 +9,7 @@ const SignaturePage = ({ onCakeClick, onBack }) => {
     <div className="signature-page">
       <div className="cake-grid grid-2 grid">
           {signatureCakesData.map((category, index) => (
-            <div key={index} className="category-item " onClick={category.onClick}>
+            <div key={index} className="category-item " onClick={()=> onCakeClick(category)}>
               <div className="category-image flex-center" style={{ background: category.color }}>
                 <img src={category.image} alt={category.title} />
               </div>

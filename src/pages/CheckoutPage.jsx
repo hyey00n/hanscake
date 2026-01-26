@@ -146,7 +146,7 @@ const CheckoutPage = ({ cartItems = [], onBack }) => {
             >
               <CreditCard size={24} />
               <span>신용/체크카드</span>
-              {paymentMethod === 'card' && <Check className="check-icon" size={20} />}
+          
             </button>
             <button
               type="button"
@@ -155,7 +155,7 @@ const CheckoutPage = ({ cartItems = [], onBack }) => {
             >
               <div className="kakao-icon">K</div>
               <span>카카오페이</span>
-              {paymentMethod === 'kakao' && <Check className="check-icon" size={20} />}
+             
             </button>
             <button
               type="button"
@@ -164,7 +164,7 @@ const CheckoutPage = ({ cartItems = [], onBack }) => {
             >
               <Smartphone size={24} />
               <span>토스페이</span>
-              {paymentMethod === 'toss' && <Check className="check-icon" size={20} />}
+             
             </button>
           </div>
         </section>

@@ -1,134 +1,18 @@
 /* AlarmPage.css */
 
-.alarm-page {
-  background: #FAFAF8;
-  min-height: 100vh;
-  padding-bottom: 100px;
-}
-
-.page-header {
-  background: white;
-  padding: 20px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #F0F0F0;
-}
-
-.page-header h1 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #2C2C2C;
-}
-
-.mark-read-btn {
-  background: none;
-  border: none;
-  color: #D4A574;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.notification-list {
-  background: white;
-}
-
-.notification-item {
-  display: flex;
-  gap: 16px;
-  padding: 20px 16px;
-  border-bottom: 1px solid #F0F0F0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  position: relative;
-}
-
-.notification-item:hover {
-  background: #FAFAF8;
-}
-
-.notification-item.new {
-  background: #FFF8F0;
-}
-
-.notification-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #F5F5F5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: #D4A574;
-}
-
-.notification-content {
-  flex: 1;
-}
-
-.notification-content h3 {
-  font-size: 15px;
-  font-weight: 600;
-  color: #2C2C2C;
-  margin-bottom: 6px;
-}
-
-.notification-content p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
-}
-
-.notification-time {
-  font-size: 12px;
-  color: #999;
-}
-
-.new-badge {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #FF6B6B;
-  position: absolute;
-  right: 20px;
-  top: 24px;
-}
-
-.empty-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.empty-state h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #2C2C2C;
-  margin: 16px 0 8px;
-}
-
-.empty-state p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 24px;
-}
-
-.empty-state button {
-  padding: 12px 32px;
-  background: #D4A574;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.empty-state button:hover {
-  background: #C29563;
-}
+.alarm-page { background: #FAFAF8; min-height: 100vh; padding-bottom: 100px; }
+.notification-list { background: white; }
+.notification-item { display: flex; gap: 16px; padding: 20px 16px; border-bottom: 1px solid #F0F0F0; cursor: pointer; transition: background 0.3s ease; position: relative; }
+.notification-item:hover { background: #FAFAF8; }
+.notification-item.new { background: #FFF8F0; }
+.notification-icon { width: 48px; height: 48px; border-radius: 50%; background: #F5F5F5; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--main100); }
+.notification-content { flex: 1; }
+.notification-content h3 { font-size: 15px; font-weight: 600; color: #2C2C2C; margin-bottom: 6px; }
+.notification-content p { font-size: 14px; color: #666; margin-bottom: 8px; }
+.notification-time { font-size: 12px; color: #999; }
+.new-badge { width: 8px; height: 8px; border-radius: 50%; background: #FF6B6B; position: absolute; right: 20px; top: 24px; }
+.empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; text-align: center; }
+.empty-state h3 { font-size: 18px; font-weight: 600; color: #2C2C2C; margin: 16px 0 8px; }
+.empty-state p { font-size: 14px; color: #666; margin-bottom: 24px; }
+.empty-state button { padding: 12px 32px; background: var(--main100); color: white; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+.empty-state button:hover { background: #C29563; }
