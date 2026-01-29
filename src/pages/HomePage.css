@@ -33,8 +33,8 @@
 .category-scroll::-webkit-scrollbar { display: none; }
 .category-scroll:active { cursor: grabbing; }
 .category-item { color: var(--color900); flex-shrink: 0; scroll-snap-align: none; /* 스냅 제거 */
-  text-align: left; cursor: pointer; transition: transform 0.3s ease; font-size: 14px; min-width: 200px; pointer-events: auto; }
-.category-image { width: 200px; height: 200px; border: 1px solid var(--color200); }
+  text-align: left; cursor: pointer; transition: transform 0.3s ease; font-size: 14px; pointer-events: auto; }
+.category-image { width: 180px; height: 180px; border: 1px solid var(--color200); }
 .category-expected { font-size: 15px; font-weight: 600; color: var(--color600); }
 .category-price-info { gap: 4px; align-items: center; }
 .category-discount { font-size: 18px; font-weight: 600; color: var(--main100); }
@@ -48,7 +48,7 @@
 .cake-card { position: relative; align-items: center; gap: 8px; background: white; overflow: hidden; cursor: pointer; transition: all 0.3s ease; }
 .badge { position: absolute; top: 0px; left: 0px; color: white; font-size: 12px; display: inline-block; padding: 2px 4px; z-index: 2; min-width: 40px; text-align: center; }
 .badge.best { background: #FF6B6B; }
-.cake-image { position: relative; overflow: hidden; width: 180px; height: 180px; border: 1px solid var(--color200); }
+.cake-image { position: relative; overflow: hidden; width: 150px; height: 150px; border: 1px solid var(--color200); }
 .cake-image img { position: absolute; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
 .cake-card:hover .cake-image img { transform: scale(1.1); }
 .wishlist-btn { position: absolute; top: 12px; right: 12px; background: white; cursor: pointer; transition: all 0.3s ease; pointer-events: auto; }
