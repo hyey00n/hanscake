@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hanscake/static/css/main.8740e97e.css",
+    "main.css": "/hanscake/static/css/main.cfb24c0b.css",
     "main.js": "/hanscake/static/js/main.57b06f07.js",
     "static/js/453.1aecb12e.chunk.js": "/hanscake/static/js/453.1aecb12e.chunk.js",
     "static/media/redvelvet.png": "/hanscake/static/media/redvelvet.9db84085a6453e94379c.png",
@@ -42,12 +42,12 @@
     "static/media/apple.svg": "/hanscake/static/media/apple.10b98f76b57d249abcc7.svg",
     "index.html": "/hanscake/index.html",
     "static/media/naver.svg": "/hanscake/static/media/naver.307bdbd517abdd36b3e5.svg",
-    "main.8740e97e.css.map": "/hanscake/static/css/main.8740e97e.css.map",
+    "main.cfb24c0b.css.map": "/hanscake/static/css/main.cfb24c0b.css.map",
     "main.57b06f07.js.map": "/hanscake/static/js/main.57b06f07.js.map",
     "453.1aecb12e.chunk.js.map": "/hanscake/static/js/453.1aecb12e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8740e97e.css",
+    "static/css/main.cfb24c0b.css",
     "static/js/main.57b06f07.js"
   ]
 }
